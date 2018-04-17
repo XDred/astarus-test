@@ -1,5 +1,5 @@
 @extends('layouts.overall')
-
+@section('title', 'Password reset')
 @section('body')
 <div class="register-box">
   <div class="register-logo">
@@ -49,4 +49,19 @@
   </div>
   <!-- /.form-box -->
 </div>
+@endsection
+@section('scripts_after')
+<script src="{{ asset('/plugins/iCheck/icheck.min.js') }}"></script>
+<script>
+  $(document).ready(function () {
+	  $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+  });
+</script>
+@endsection
+@section('css')
+  <link rel="stylesheet" href="{{ asset('/plugins/iCheck/square/blue.css') }}">
 @endsection
